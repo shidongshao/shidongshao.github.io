@@ -38,12 +38,19 @@
     {%- endif -%}
     
     {%- if info['url'] -%}
-        <a class="text-body" target="_blank" href="{{ info['url'] }}">{{ display_name }}</a>{%- if forloop.index < authors.size -%}, {% endif -%}
+    <a class="text-body" target="_blank" href="{{ info['url'] }}">{{ display_name }}</a>
     {%- else -%}
-        <span class="text-body">
-            {{ display_name }}{%- if forloop.index < authors.size -%}, {% endif -%}
-        </span>
+        <span class="text-body">{{ display_name }}</span>
     {%- endif -%}
+
+    {%- unless forloop.last -%}
+        {%- assign second_last = authors.size | minus: 1 -%}
+        {%- if forloop.index == second_last -%}
+            {%- if authors.size > 2 -%}, and {% else %} and {% endif -%}
+        {%- else -%}
+            , 
+        {%- endif -%}
+    {%- endunless -%}
 
 {%- endfor -%}
 
