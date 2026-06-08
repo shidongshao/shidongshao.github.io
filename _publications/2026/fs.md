@@ -7,7 +7,7 @@ pub_pre:
 selected:       true
 abstract: >-
 #cover:    
-presentations: 2026 CCER Summer Institute (scheduled), CUHK (scheduled)
+presentations: 10th CCER Summer Institute (scheduled), CUHK (scheduled)
 #authors:
 #links:
 
