@@ -94,7 +94,7 @@ div.lazy {
 
 .terminal-cursor {
   display: inline-block;
-  width: 1px;
+  width: 2px;
   height: 1em;
   background-color: rgb(117,15,109);
   vertical-align: text-bottom;
