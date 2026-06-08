@@ -48,7 +48,7 @@
         {%- if forloop.index == second_last -%}
             {%- if authors.size > 2 -%}, and {% else %} and {% endif -%}
         {%- else -%}
-            , 
+            {, }
         {%- endif -%}
     {%- endunless -%}
 
