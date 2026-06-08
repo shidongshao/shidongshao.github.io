@@ -6,7 +6,7 @@
         <div class="col-12">
             <p>
                 {% if item.url and item.url != "" %}
-                        <a href="{{ item.url }}" target="_blank"><strong>{{item.title}}</strong></a>, {{ item.position }}
+                        <a href="{{ item.url | relative_url }}" target="_blank"><strong>{{item.title}}</strong></a>, {{ item.position }}
                 {% else %}
                 <strong>{{ item.title }}</strong>, {{ item.position }}
                 {% endif %}
