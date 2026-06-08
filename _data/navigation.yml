@@ -10,3 +10,6 @@ pages:
 
 - name: Teaching
   url: /teaching
+
+- name: CV
+  url: /cv
