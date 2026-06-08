@@ -1,0 +1,28 @@
+---
+layout: default
+title : Teaching
+navbar_title: Teaching
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+{% assign blogs_by_year = site.teaching | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+
+<div class="row align-items-center">
+    <div class="col-2 d-none d-lg-block text-center">
+        <img src="/assets/images/badges/cuhkbiz.png"
+            style="width: 150px; height: 150px; object-fit: contain;">
+    </div>
+
+    <div class="col-12 col-lg-10">
+        {% for year in blogs_by_year %}
+        {% assign num_blogs = year.items | size %}
+        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+            {% for item in year.items %}
+                {% include widgets/teaching_card.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

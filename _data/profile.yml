@@ -5,7 +5,7 @@ navbar_name: "Shidong Shao"
 positions:
 - name: Ph.D. Candidate in Finance
 - name: CUHK
-  logo: /assets/images/badges/logo-cuhkbiz.png  # Logo is optional
+  logo: /assets/images/badges/cuhk.png  # Logo is optional
 
 
 email: "shidongshao@link.cuhk.edu.hk"
@@ -28,7 +28,7 @@ short_bio: >-
   </p>
 
 portrait_url: /assets/images/photos/shidong.jpg
-logo_url: /assets/images/badges/logo-cuhkbiz.png
+logo_url: /assets/images/badges/cuhk.png
 #portrait_caption: >-
   #Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 

@@ -6,5 +6,7 @@ pages:
 #- name: Home2
 #  url: /index_layout2
 - name: Research
-  url: /publications
+  url: /research
 
+- name: Teaching
+  url: /teaching

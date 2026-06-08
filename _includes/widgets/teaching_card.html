@@ -1,0 +1,26 @@
+{% assign item = include.item %}
+{% assign hide_bottom_border = include.hide_bottom_border %}
+
+<div class="border-bottom border-gray p-3 {% if hide_bottom_border %}border-0{% endif %}">
+    <div class="row">
+        <div class="col-12">
+            <p>
+                {% if item.url and item.url != "" %}
+                        <a href="{{ item.url }}" target="_blank"><strong>{{item.title}}</strong></a>, {{ item.position }}
+                {% else %}
+                <strong>{{ item.title }}</strong>, {{ item.position }}
+                {% endif %}
+            </p>
+            {% for course in item.courses %}
+            <div class="row mb-1">
+                <div class="col-10">
+                    {{ course.name }}
+                </div>
+                <div class="col-2 text-right">
+                    {{ course.year }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

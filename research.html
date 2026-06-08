@@ -6,12 +6,12 @@ body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
 
-{% assign working_papers = site.publications 
+{% assign working_papers = site.research
     | where: "category", "working-paper" 
     | sort: "date" 
     | reverse %}
 
-{% assign work_in_progress = site.publications 
+{% assign work_in_progress = site.research 
     | where: "category", "work-in-progress" 
     | sort: "date" 
     | reverse %}
@@ -19,7 +19,7 @@ body_attr: >-
 <div class="row">
     <div class="col-12 col-lg-10">
 
-        <h2 class="mt-4 mb-4 pt-4" id="Working Papers">Working Papers</h2>
+        <h4 class="mt-4 mb-4 pt-4" id="Working Papers">Working Papers</h4>
         <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
             {% for item in working_papers %}
                 {% include widgets/publication_item.html 
@@ -30,7 +30,7 @@ body_attr: >-
             {% endfor %}
         </div>
 
-        <h2 class="mt-4 mb-4 pt-4" id="Work in Progress">Work in Progress</h2>
+        <h4 class="mt-4 mb-4 pt-4" id="Work in Progress">Work in Progress</h4>
         <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
             {% for item in work_in_progress %}
                 {% include widgets/publication_item.html 
