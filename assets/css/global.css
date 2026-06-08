@@ -91,3 +91,17 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+.terminal-cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background-color: rgb(117,15,109);
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
