@@ -47,8 +47,8 @@
         {%- assign second_last = authors.size | minus: 1 -%}
         {%- if forloop.index == second_last -%}
             {%- if authors.size > 2 -%}, and {% else %} and {% endif -%}
-        {%- else %}
-        , 
+        {%- else -%}
+            ,&nbsp;
         {%- endif -%}
     {%- endunless -%}
 
