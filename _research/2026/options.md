@@ -17,5 +17,5 @@ authors:
   - Tse-Chun Lin
   - Xingguo Luo
 links:
-  Preliminary Draft: https://www.dropbox.com/scl/fi/m46k4gkipoygdoip3vp12/OOI_Draft_20260421.pdf?rlkey=yxuhtlhv74cswhtfx83nsm5b1&st=smvbs0jc&dl=0
+  Preliminary Draft: https://www.dropbox.com/scl/fi/xzspv5l8g19vfnm4pk9jj/Lin_Luo_Shao_OOI.pdf?rlkey=qqfx9erh7tiy1gzyva57emrnp&st=7vuksbr7&dl=0
 ---

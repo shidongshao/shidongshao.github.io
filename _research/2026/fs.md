@@ -1,5 +1,5 @@
 ---
-title:          "Revisit Fractional Shares"
+title:          "Revisit Fractional Shares: The Real Effect on Market Quality"
 date:           2026-06-03 00:01:00 +0800
 category: work-in-progress
 pub:            
