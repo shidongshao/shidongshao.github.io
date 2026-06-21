@@ -105,3 +105,19 @@ div.lazy {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+
+.btn.btn-outline-dark:hover,
+.btn.btn-outline-dark:focus {
+  background-color: rgba(117, 15, 109, 0.12); /* soft tint on hover/focus */
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.btn.btn-outline-dark:active,
+.btn.btn-outline-dark.active,
+.show > .btn.btn-outline-dark.dropdown-toggle {
+  background-color: rgba(117, 15, 109, 0.18); /* slightly stronger on active */
+  border-color: #5a6268;
+  color: #fff;
+}
