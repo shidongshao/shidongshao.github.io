@@ -7,7 +7,7 @@ pub_pre:
 selected:       true
 abstract: >-
 #cover:    
-presentations: 10th CCER Summer Institute (scheduled), CUHK (scheduled)
+presentations: 10th CCER Summer Institute, CUHK (scheduled)
 #authors:
 #links:
 
