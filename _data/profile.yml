@@ -3,8 +3,7 @@ secondary_name: "邵世栋"
 navbar_name: "Shidong Shao"
 
 positions:
-- name: Ph.D. Candidate in Finance
-- name: CUHK
+- name: Ph.D. Candidate in Finance, CUHK
   logo: /assets/images/badges/cuhk.png  # Logo is optional
 
 
@@ -27,7 +26,7 @@ short_bio: >-
     My research interests fall into empirical asset pricing, empirical corporate finance, high-frequency data, and market microstructure.
   </p>
 
-portrait_url: /assets/images/photos/shidong.jpg
+portrait_url: /assets/images/photos/shidong3.jpg
 logo_url: /assets/images/badges/cuhk.png
 #portrait_caption: >-
   #Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).

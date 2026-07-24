@@ -17,10 +17,10 @@ body_attr: >-
     | reverse %}
 
 <div class="row">
-    <div class="col-12 col-lg-10">
+    <div class="col-12 col-lg-10 mx-auto">
 
-        <h4 class="mt-4 mb-4 pt-4" id="Working Papers">Working Papers</h4>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+        <h4 class="mt-4 mb-4 pt-4 text-center" id="Working Papers">Working Papers</h4>
+        <div class="my-0 p-0">
             {% for item in working_papers %}
                 {% include widgets/publication_item.html 
                     item=item 
@@ -30,8 +30,11 @@ body_attr: >-
             {% endfor %}
         </div>
 
-        <h4 class="mt-4 mb-4 pt-4" id="Work in Progress">Work in Progress</h4>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+    <hr>
+
+        <h4 class="mt-4 mb-4 pt-4 text-center" id="Work in Progress">Work in Progress</h4>
+        <!-- <div class="my-0 p-0 bg-white shadow-sm rounded-xl"> -->
+        <div class="my-0 p-0">
             {% for item in work_in_progress %}
                 {% include widgets/publication_item.html 
                     item=item 

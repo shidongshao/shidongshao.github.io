@@ -5,7 +5,7 @@ category: work-in-progress
 pub:            
 pub_pre:        
 selected:       true
-abstract: >-
+#abstract: 
 #cover:    
 presentations: 10th CCER Summer Institute, CUHK (scheduled)
 #authors:

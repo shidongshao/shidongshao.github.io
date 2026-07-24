@@ -10,16 +10,48 @@
                 <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
                 {% endif %}
                 {% endfor %}</h6>
-            <p class="mt-0 mb-0 font-weight-bold font-italic">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
+            
             <p class="mt-0 mb-0">
                 {%if item.authors[0] %} with {%else%} solo-authored {%endif%}
                 {% include widgets/author_list.html authors=item.authors %}
             </p>
-            
-            <p class="mt-2 mb-2 text-muted">{{ item.abstract }}</p>
 
-            <p class="mt-0 mb-0"><strong><u>Presentations:</u></strong> {{ item.presentations }}</p>
-            {% if item.awards %}<p class="mt-1 mb-1"><strong><u>Awards:</u></strong> {{ item.awards }}</p>{% endif %}
+            <p class="mt-0 mb-0 font-weight-bold font-italic">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
+            
+            {% if item.awards %}
+            <div class="mt-1 mb-1">
+                {% for award in item.awards %}
+                <div style="color: #db1111; font-style: italic;">
+                    {{ award }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <p class="mt-3 mb-3">Presentations: {{ item.presentations }}</p>
+
+            {% if item.abstract %}
+            <div class="mt-2 mb-2">
+                <a
+                    class="font-weight-bold"
+                    data-toggle="collapse"
+                    href="#abstract-{{ item.title | slugify }}-{{ forloop.index }}"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="abstract-{{ item.title | slugify }}-{{ forloop.index }}">
+                    <i class="fas fa-chevron-down"></i>
+                    Abstract
+                </a>
+
+                <div
+                    class="collapse"
+                    id="abstract-{{ item.title | slugify }}-{{ forloop.index }}">
+                    <p class="mt-2 mb-0 text-muted">
+                        {{ item.abstract }}
+                    </p>
+                </div>
+            </div>
+            {% endif %}
 
         </div>
     </div>
@@ -38,16 +70,49 @@
                 <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
                 {% endif %}
                 {% endfor %}</p>
-                <p class="mt-0 mb-0 font-weight-bold font-italic">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
-            <p class="mt-0 mb-0">
-                {%if item.authors[0] %} with {%else%} solo-authored {%endif%}
-                {% include widgets/author_list.html authors=item.authors %}
-            </p>
-            
-            <p class="mt-2 mb-2 text-muted">{{ item.abstract }}</p>
+                
+                <p class="mt-0 mb-0">
+                    {%if item.authors[0] %} with {%else%} solo-authored {%endif%}
+                    {% include widgets/author_list.html authors=item.authors %}
+                </p>
 
-            <p class="mt-0 mb-0"><strong><u>Presentations:</u></strong> {{ item.presentations }}</p>
-            {% if item.awards %}<p class="mt-1 mb-1"><strong><u>Awards:</u></strong> {{ item.awards }}</p>{% endif %}
+                <p class="mt-0 mb-0 font-weight-bold font-italic">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
+
+                {% if item.awards %}
+
+                <div class="mt-1 mb-1">
+                    {% for award in item.awards %}
+                    <div style="color: #db1111; font-style: italic;">
+                        {{ award }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <p class="mt-3 mb-3">Presentations: {{ item.presentations }}</p>
+                
+                {% if item.abstract %}
+                <div class="mt-2 mb-2">
+                    <a
+                        class="font-weight-bold"
+                        data-toggle="collapse"
+                        href="#abstract-{{ item.title | slugify }}-{{ forloop.index }}"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="abstract-{{ item.title | slugify }}-{{ forloop.index }}">
+                        <i class="fas fa-chevron-down"></i>
+                        Abstract
+                    </a>
+
+                    <div
+                        class="collapse"
+                        id="abstract-{{ item.title | slugify }}-{{ forloop.index }}">
+                        <p class="mt-2 mb-0 text-muted">
+                            {{ item.abstract }}
+                        </p>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>
