@@ -20,7 +20,7 @@
 
                     {% if site.data.profile.portrait_url %}
                     <!-- Mobile portrait -->
-                    <div class="d-md-none w-100 text-center mt-3">
+                    <div class="d-md-none w-100 text-center mb-3">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -39,8 +39,8 @@
                     </div>
                     {% endif %}
 
-                    <div class="d-flex">
-                        <div class="h3 font-weight-normal mb-lg-1 mb-1">
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <div class="h3 font-weight-normal mb-lg-1 mb-1 text-center text-md-left">
                             {{ site.data.profile.primary_name }}
 
                             {% if site.data.profile.secondary_name %}
@@ -61,21 +61,23 @@
                         </div>
                     </div>
 
-                    <div class="text-profile-position">
+                    <div class="text-profile-position text-center text-md-left">
                         {% for position in site.data.profile.positions %}
                             {{ position.name }}<br>
                         {% endfor %}
                     </div>
 
-                    <a
-                        class="pr-3"
-                        href="mailto:{{ site.data.profile.email | encode_email }}">
-                        <i class="fas fa-envelope"></i>
-                        <span >
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
-                        </span>
-                        </br>
-                    </a>
+                    <div class="text-center text-md-left">
+                        <a
+                            class="pr-md-3"
+                            href="mailto:{{ site.data.profile.email | encode_email }}">
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                {{ site.data.profile.email | replace: "@", "(at)" }}
+                            </span>
+                        </a>
+                    </div>
+
 
                     <div
                         class="text-profile-bio mt-3"
