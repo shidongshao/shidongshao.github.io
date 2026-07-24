@@ -18,6 +18,27 @@
                     </div>
                     {% endif %}
 
+                    {% if site.data.profile.portrait_url %}
+                    <!-- Mobile portrait -->
+                    <div class="ml-auto pl-3 d-md-none">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="{{ site.data.profile.portrait_url | relative_url }}">
+                            <img
+                                src="{{ site.data.profile.portrait_url | relative_url }}"
+                                class="img-fluid img-thumbnail"
+                                style="
+                                    width: 300px;
+                                    height: 300px;
+                                    object-fit: cover;
+                                    border-radius: 0 !important;
+                                "
+                                alt="Portrait">
+                        </a>
+                    </div>
+                    {% endif %}
+
                     <div class="d-flex">
                         <div class="h3 font-weight-normal mb-lg-1 mb-1">
                             {{ site.data.profile.primary_name }}
@@ -38,27 +59,6 @@
                             </span>
                             {% endif %}
                         </div>
-
-                        {% if site.data.profile.portrait_url %}
-                        <!-- Mobile portrait -->
-                        <div class="ml-auto pl-3 d-md-none">
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="{{ site.data.profile.portrait_url | relative_url }}">
-                                <img
-                                    src="{{ site.data.profile.portrait_url | relative_url }}"
-                                    class="img-fluid img-thumbnail"
-                                    style="
-                                        width: 200px;
-                                        height: 200px;
-                                        object-fit: cover;
-                                        border-radius: 0 !important;
-                                    "
-                                    alt="Portrait">
-                            </a>
-                        </div>
-                        {% endif %}
                     </div>
 
                     <div class="text-profile-position">
