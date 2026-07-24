@@ -39,10 +39,21 @@
 
                         {% if site.data.profile.portrait_url %}
                         <!-- Mobile portrait -->
-                        <div class="ml-auto d-md-none">
+                        <div class="ml-auto pl-3 d-md-none">
                             <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href="{{ site.data.profile.portrait_url | relative_url }}">
+                                <img
+                                    src="{{ site.data.profile.portrait_url | relative_url }}"
+                                    class="img-fluid img-thumbnail"
+                                    style="
+                                        width: 100px;
+                                        height: 100px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                    "
+                                    alt="Portrait">
                             </a>
                         </div>
                         {% endif %}
