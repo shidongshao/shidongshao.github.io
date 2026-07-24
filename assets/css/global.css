@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6,
 @media (max-width: 575.98px) {
     .navbar-signature {
         top: 30px;
-        font-size: 2rem;
+        font-size: 1rem;
         max-width: 45%;
         overflow: hidden;
         text-overflow: ellipsis;
