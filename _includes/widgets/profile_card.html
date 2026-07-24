@@ -31,7 +31,7 @@
                                 style="
                                     width: min(300px, 60vw);
                                     aspect-ratio: 1 / 1;
-                                    object-fit: cover;
+                                    object-fit: contain;
                                     border-radius: 0 !important;
                                 "
                                 alt="Portrait">
@@ -79,96 +79,98 @@
                     </div>
 
 
-                    <div
-                        class="text-profile-bio mt-3"
-                        {% if site.data.profile.short_bio_text_justify %}
-                        style="text-align: justify;"
-                        {% endif %}>
+                    <div class="text-profile-bio mt-3 text-center text-md-left">
                         {{ site.data.profile.short_bio }}
                     </div>
 
-                    {% if site.data.profile.cv_link %}
-                    <a
-                        class="pr-3 no-break"
-                        target="_blank"
-                        href="{{ site.data.profile.cv_link | relative_url }}">
-                        <i class="fas fa-file-alt"></i>
-                        Curriculum Vitae
-                    </a>
-                    {% endif %}
+                    <div class="mt-3 text-center text-md-left">
 
-                    {% if site.data.profile.gscholar %}
-                        {% if site.data.profile.gscholar contains 'scholar.google' %}
-                            {% assign gscholar_url = site.data.profile.gscholar %}
-                        {% else %}
-                            {% assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar %}
-                        {% endif %}
-
+                        {% if site.data.profile.cv_link %}
                         <a
-                            class="pr-3 no-break"
+                            class="d-inline-block px-2 no-break"
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="{{ gscholar_url }}">
-                            <i class="fab fa-google-scholar"></i>
-                            Google Scholar
+                            href="{{ site.data.profile.cv_link | relative_url }}">
+                            <i class="fas fa-file-alt"></i>
+                            Curriculum Vitae
                         </a>
-                    {% endif %}
+                        {% endif %}
 
-                    {% if site.data.profile.github %}
-                    <a
-                        class="pr-3 no-break"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://github.com/{{ site.data.profile.github }}">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                    {% endif %}
+                        {% if site.data.profile.gscholar %}
+                            {% if site.data.profile.gscholar contains 'scholar.google' %}
+                                {% assign gscholar_url = site.data.profile.gscholar %}
+                            {% else %}
+                                {% assign gscholar_url = 'https://scholar.google.com/citations?user='
+                                    | append: site.data.profile.gscholar %}
+                            {% endif %}
 
-                    {% if site.data.profile.wechat_qrcode %}
-                    <a
-                        class="pr-3 no-break"
-                        href="#"
-                        role="button"
-                        data-toggle="modal"
-                        data-target="#modal-wechat">
-                        <i class="fab fa-weixin"></i>
-                        WeChat
-                    </a>
-                    {% endif %}
+                            <a
+                                class="d-inline-block px-2 no-break"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="{{ gscholar_url }}">
+                                <i class="fab fa-google-scholar"></i>
+                                Google Scholar
+                            </a>
+                        {% endif %}
 
-                    {% if site.data.profile.twitter %}
-                    <a
-                        class="pr-3 no-break"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://twitter.com/{{ site.data.profile.twitter }}">
-                        <i class="fab fa-twitter"></i>
-                        Twitter
-                    </a>
-                    {% endif %}
+                        {% if site.data.profile.github %}
+                        <a
+                            class="d-inline-block px-2 no-break"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://github.com/{{ site.data.profile.github }}">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        {% endif %}
 
-                    {% if site.data.profile.linkedin %}
-                    <a
-                        class="pr-3 no-break"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                    {% endif %}
+                        {% if site.data.profile.wechat_qrcode %}
+                        <a
+                            class="d-inline-block px-2 no-break"
+                            href="#"
+                            role="button"
+                            data-toggle="modal"
+                            data-target="#modal-wechat">
+                            <i class="fab fa-weixin"></i>
+                            WeChat
+                        </a>
+                        {% endif %}
 
-                    {% if site.data.profile.orcid %}
-                    <a
-                        class="pr-3 no-break"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://orcid.org/{{ site.data.profile.orcid }}">
-                        <i class="fab fa-orcid"></i>
-                        ORCID
-                    </a>
-                    {% endif %}
+                        {% if site.data.profile.twitter %}
+                        <a
+                            class="d-inline-block px-2 no-break"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://twitter.com/{{ site.data.profile.twitter }}">
+                            <i class="fab fa-twitter"></i>
+                            Twitter
+                        </a>
+                        {% endif %}
+
+                        {% if site.data.profile.linkedin %}
+                        <a
+                            class="d-inline-block px-2 no-break"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        {% endif %}
+
+                        {% if site.data.profile.orcid %}
+                        <a
+                            class="d-inline-block px-2 no-break"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://orcid.org/{{ site.data.profile.orcid }}">
+                            <i class="fab fa-orcid"></i>
+                            ORCID
+                        </a>
+                        {% endif %}
+
+                    </div>
 
                 </div>
             </div>
