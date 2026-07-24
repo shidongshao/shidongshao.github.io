@@ -20,17 +20,17 @@
 
                     {% if site.data.profile.portrait_url %}
                     <!-- Mobile portrait -->
-                    <div class="ml-auto pl-3 mb-3 d-md-none">
+                    <div class="d-md-none w-100 text-center mt-3">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href="{{ site.data.profile.portrait_url | relative_url }}">
                             <img
                                 src="{{ site.data.profile.portrait_url | relative_url }}"
-                                class="img-fluid img-thumbnail"
+                                class="img-fluid img-thumbnail d-block mx-auto"
                                 style="
-                                    width: 300px;
-                                    height: 300px;
+                                    width: min(200px, 60vw);
+                                    aspect-ratio: 1 / 1;
                                     object-fit: cover;
                                     border-radius: 0 !important;
                                 "
