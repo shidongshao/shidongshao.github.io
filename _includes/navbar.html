@@ -1,14 +1,67 @@
+<style>
+    /* 宽屏：相对于导航栏居中 */
+    .navbar-name {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 !important;
+        max-width: 35vw;
+        overflow: hidden;
+
+        font-size: clamp(2.2rem, 4vw, 3rem) !important;
+        line-height: 1;
+        color: #000 !important;
+        text-decoration: none !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    /* 中等屏幕：紧跟在 Logo 右边 */
+    @media (min-width: 400px) and (max-width: 800px) {
+        .navbar-name {
+        position: relative;
+        top: 3px;
+        left: auto;
+        transform: none;
+
+        align-self: center;
+        flex-shrink: 0;
+
+        max-width: 180px;
+        margin-left: 0.25rem !important;
+        margin-right: 0.75rem !important;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        font-size: 2rem !important;
+        line-height: 1;
+        }
+    }
+
+    /* 小屏幕：隐藏 */
+    @media (max-width: 399.98px) {
+    .navbar-name {
+        display: none !important;
+    }
+    }
+</style>
+
 <nav class="navbar navbar-expand-sm navbar-light fixed-top mb-5 shadow-sm">
-    <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %} d-flex align-items-center">
+    <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %} d-flex align-items-center position-relative w-100">
 
         <a
             href="https://www.bschool.cuhk.edu.hk/"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            style="flex-shrink: 0;">
             <img
                 src="{{ site.data.profile.logo_url | relative_url }}"
                 alt="Logo"
                 style="
+                    display: block;
                     width: 120px;
                     height: 60px;
                     object-fit: cover;
@@ -17,29 +70,18 @@
         </a>
 
         <a
-            class="navbar-brand mrs-saint-delafield-regular d-none d-sm-block"
-            href="{{ '/' | relative_url }}"
-            style="
-                position: absolute;
-                top: 17px;
-                left: 50%;
-                transform: translateX(-50%);
-                margin: 0;
-                max-width: 35vw;
-                overflow: hidden;
-                font-size: clamp(2.2rem, 4vw, 3rem) !important;
-                line-height: 1;
-                color: #000 !important;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                cursor: pointer;
-            ">
+            class="navbar-brand navbar-name mrs-saint-delafield-regular"
+            href="{{ '/' | relative_url }}">
             {{ site.data.profile.navbar_name }}
         </a>
 
         <button
             class="navbar-toggler ml-auto"
-            style="font-size: 1em; padding: 0.5em;"
+            style="
+                flex-shrink: 0;
+                font-size: 1em;
+                padding: 0.5em;
+            "
             type="button"
             data-toggle="collapse"
             data-target="#navbarResponsive"
@@ -53,7 +95,9 @@
             <ul class="navbar-nav ml-auto">
                 {% for item in site.data.navigation.pages %}
                 <li class="nav-item {% if item.name == page.navbar_title or include.active_page == item.name %}active{% endif %}">
-                    <a class="nav-link" href="{{ item.url | relative_url }}">
+                    <a
+                        class="nav-link"
+                        href="{{ item.url | relative_url }}">
                         {{ item.name }}
                     </a>
                 </li>
