@@ -21,21 +21,16 @@
                     {% if site.data.profile.portrait_url %}
                     <!-- Mobile portrait -->
                     <div class="d-md-none w-100 text-center mb-3">
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="{{ site.data.profile.portrait_url | relative_url }}">
-                            <img
-                                src="{{ site.data.profile.portrait_url | relative_url }}"
-                                class="img-fluid img-thumbnail d-block mx-auto"
-                                style="
-                                    width: min(300px, 60vw);
-                                    aspect-ratio: 1126 / 1488;
-                                    object-fit: contain;
-                                    border-radius: 0 !important;
-                                "
-                                alt="Portrait">
-                        </a>
+                        <img
+                            src="{{ site.data.profile.portrait_url | relative_url }}"
+                            class="img-fluid img-thumbnail d-block mx-auto"
+                            style="
+                                width: min(300px, 60vw);
+                                aspect-ratio: 1126 / 1488;
+                                object-fit: contain;
+                                border-radius: 0 !important;
+                            "
+                            alt="Portrait">
                     </div>
                     {% endif %}
 
