@@ -2,15 +2,15 @@
     /* 宽屏：相对于导航栏居中 */
     .navbar-name {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin: 0 !important;
         max-width: 35vw;
-        overflow: hidden;
+        overflow: visible;
 
-        font-size: clamp(2.2rem, 4vw, 3rem) !important;
-        line-height: 1;
+        font-size: 2.5rem !important;
+        line-height: 1.2;
         color: #000 !important;
         text-decoration: none !important;
         white-space: nowrap;
@@ -19,33 +19,44 @@
         z-index: 2;
     }
 
+    /* Ensure link color stays black on all states */
+    .navbar-name:hover,
+    .navbar-name:focus,
+    .navbar-name:active,
+    .navbar-name:visited {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
     /* 中等屏幕：紧跟在 Logo 右边 */
     @media (min-width: 400px) and (max-width: 800px) {
         .navbar-name {
-        position: relative;
-        top: 3px;
-        left: auto;
-        transform: none;
+            position: relative;
+            top: 0;
+            left: auto;
+            transform: none;
 
-        align-self: center;
-        flex-shrink: 0;
+            align-self: center;
+            flex-shrink: 0;
 
-        max-width: 180px;
-        margin-left: 0.25rem !important;
-        margin-right: 0.75rem !important;
-        padding-top: 0;
-        padding-bottom: 0;
+            max-width: 180px;
+            margin-left: 0.25rem !important;
+            margin-right: 0.75rem !important;
+            padding-top: 0.3rem;
+            padding-bottom: 0;
 
-        font-size: 2rem !important;
-        line-height: 1;
+            font-size: 2rem !important;
+            line-height: 1.3;
+            overflow: visible;
+            color: #000 !important;
         }
     }
 
     /* 小屏幕：隐藏 */
     @media (max-width: 399.98px) {
-    .navbar-name {
-        display: none !important;
-    }
+        .navbar-name {
+            display: none !important;
+        }
     }
 </style>
 
@@ -69,11 +80,11 @@
                 ">
         </a>
 
-        <a
+        <!--<a
             class="navbar-brand navbar-name mrs-saint-delafield-regular"
             href="{{ '/' | relative_url }}">
             {{ site.data.profile.navbar_name }}
-        </a>
+        </a>-->
 
         <button
             class="navbar-toggler ml-auto"
