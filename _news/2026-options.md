@@ -1,6 +1,6 @@
 ---
 title: >-
-    In our new paper, "Intraday Signed Options Volume and Stock Return Predictability," we found the stock return predictive power of options order imbalance around the closing bell dwarfs those in the remaining intraday time.
-    <a href="https://www.dropbox.com/scl/fi/m46k4gkipoygdoip3vp12/OOI_Draft_20260421.pdf?rlkey=yxuhtlhv74cswhtfx83nsm5b1&st=smvbs0jc&dl=0" target="_blank">Read more <i class="fas fa-angle-double-right"></i></a>
+    In our new paper, "When Does Intraday Options Trading Predict Stock Returns?," we found the stock return predictive power of options order imbalance around the closing bell dwarfs those in the remaining intraday time.
+    <a href="https://www.dropbox.com/scl/fi/xzspv5l8g19vfnm4pk9jj/Lin_Luo_Shao_OOI.pdf?rlkey=qqfx9erh7tiy1gzyva57emrnp&st=7vuksbr7&dl=0" target="_blank">Read more <i class="fas fa-angle-double-right"></i></a>
 date: 2026-04-21 00:00:00 +0800
 ---

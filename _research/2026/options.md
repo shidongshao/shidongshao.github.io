@@ -1,5 +1,5 @@
 ---
-title:          "Intraday Signed Options Volume and Stock Return Predictability"
+title:          "When Does Intraday Options Trading Predict Stock Returns?"
 date:           2026-03-01 00:00:00 +0800
 selected:       true
 category: working-paper
@@ -12,7 +12,7 @@ abstract: >-
   We aggregate signed options trading volume from CBOE and ISE and document the persistent positive predictive power of 30-minute options order imbalance (OOI) for next-day stock returns. OOI near market close exhibits the strongest predictability, driven primarily by open-buy positions, high-leverage options, and small orders. Consistent with informed trading, this return predictive power intensifies with macroeconomic and firm-specific information events (FOMC meetings, interest-rate risk, uncertainty, earnings, and analyst news). Informed traders time liquidity across options and stock markets, with the predictability being stronger when options (stock) liquidity is higher (lower). Finally, OOI also forecasts stock price jumps and crash risk. 
 
 # cover: 
-presentations: 2026 FMA (scheduled), CUHK
+presentations: 10th China Derivatives Youth Forum (scheduled), 2026 FMA (scheduled), CUHK
 authors:
   - Tse-Chun Lin
   - Xingguo Luo
