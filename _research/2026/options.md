@@ -9,7 +9,7 @@ pub_pre:        "Invited for dual submission at "
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 
 abstract: >-
-  We aggregate signed options trading volume from CBOE and ISE and document the persistent positive predictive power of 30-minute options order imbalance (OOI) for next-day stock returns. OOI near market close exhibits the strongest predictability, driven primarily by open-buy positions, high-leverage options, and small orders. Consistent with informed trading, this return predictive power intensifies with macroeconomic and firm-specific information events (FOMC meetings, interest-rate risk, uncertainty, earnings, and analyst news). Informed traders time liquidity across options and stock markets, with the predictability being stronger when options (stock) liquidity is higher (lower). Finally, OOI also forecasts stock price jumps and crash risk. 
+  We aggregate signed options trading volume from CBOE and ISE and document a persistent positive predictive power of 30-minute options order imbalance (OOI) for next-day stock returns. OOI near the market close exhibits the strongest predictability, driven primarily by open-buy positions, high-leverage options, and small orders. Consistent with informed trading, options traders appear to time the liquidity across options and stock markets, and this predictability is stronger when option liquidity is high and stock liquidity is low. The predictive power also intensifies with firm-specific and macroeconomic information events. Finally, OOI also forecasts both stock price jumps and crash risks. 
 
 # cover: 
 presentations: 10th China Derivatives Youth Forum (scheduled), 2026 FMA (scheduled), CUHK
