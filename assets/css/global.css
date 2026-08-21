@@ -7,6 +7,7 @@ body {
         "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
+    font-size: 110%;
     padding-top: 5rem;
 }
 
@@ -52,7 +53,7 @@ h1, h2, h3, h4, h5, h6,
     background-color: rgba(249, 249, 249, 0.6) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    font-size: 100%;
+    font-size: 110%;
 }
 
 .mrs-saint-delafield-regular {
