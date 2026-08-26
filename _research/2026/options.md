@@ -13,6 +13,8 @@ abstract: >-
 
 # cover: 
 presentations: 10th China Derivatives Youth Forum (scheduled), 2026 FMA (scheduled), CUHK
+awards:
+  - "Best Paper Award Semifinalist, 2026 FMA"
 authors:
   - Tse-Chun Lin
   - Xingguo Luo
