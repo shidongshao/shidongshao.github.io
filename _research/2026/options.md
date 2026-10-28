@@ -20,4 +20,5 @@ authors:
   - Xingguo Luo
 links:
   SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7318198
+  PDF: /assets/files/Lin_Luo_Shao_OOI.pdf
 ---

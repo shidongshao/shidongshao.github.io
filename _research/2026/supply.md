@@ -16,5 +16,6 @@ authors:
   - Jason J. Zou
 links:
   SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6309238
+  PDF: /assets/files/Shao_Yao_Ye_Zou_Supply.pdf
   #Code: 
 ---

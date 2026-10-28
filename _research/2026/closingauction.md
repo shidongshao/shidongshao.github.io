@@ -15,4 +15,5 @@ authors:
 - Wei Zhu
 links:
   SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4639327
+  PDF: /assets/files/Shao_Yao_Zhang_Zhu_Auction.pdf
 ---
