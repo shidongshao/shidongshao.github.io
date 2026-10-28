@@ -25,6 +25,7 @@
             <p class="mt-3 mb-3">Presentations: {{ item.presentations }}</p>
 
             <div class="mt-2 mb-2">
+                <div class="d-flex flex-wrap">
                 {% if item.abstract %}
                 <a
                     class="font-weight-bold mr-2"
@@ -42,9 +43,10 @@
                 {% if link[1].url %}
                 <a class="font-weight-bold mr-2" target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
                 {% else %}
-                <a class="font-weight-bold mr-2" target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                <a class="font-weight-bold mr-2" target="_blank" href="{{ link[1] }}">[{{link[0]}}]</a>
                 {% endif %}
                 {% endfor %}
+                </div>
 
                 {% if item.abstract %}
                 <div
@@ -55,6 +57,7 @@
                     </p>
                 </div>
                 {% endif %}
+
             </div>
 
         </div>
@@ -90,27 +93,26 @@
                 <p class="mt-3 mb-3">Presentations: {{ item.presentations }}</p>
                 
                 <div class="mt-2 mb-2">
-                    {% if item.abstract %}
-                    <a
-                        class="font-weight-bold"
-                        data-toggle="collapse"
-                        href="#abstract-{{ item.title | slugify }}-{{ forloop.index }}"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="abstract-{{ item.title | slugify }}-{{ forloop.index }}">
-                        [<i class="fas fa-chevron-down"></i>
-                        Abstract]
-                    </a>
-                    {% endif %}
+                    <div class="d-flex flex-wrap">
+                        {% if item.abstract %}
+                        <a
+                            class="font-weight-bold mr-2"
+                            data-toggle="collapse"
+                            href="#abstract-{{ item.title | slugify }}-{{ forloop.index }}"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="abstract-{{ item.title | slugify }}-{{ forloop.index }}">[<i class="fas fa-chevron-down"></i> Abstract]</a>
+                        {% endif %}
 
-                    {% for link in item.links %}
-                    {% if link[1].url %}
-                    <a class="font-weight-bold mr-2" target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                    {% else %}
-                    <a class="font-weight-bold mr-2" target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                    {% endif %}
-                    {% endfor %}
-                    
+                        {% for link in item.links %}
+                        {% if link[1].url %}
+                        <a class="font-weight-bold mr-2" target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                        {% else %}
+                        <a class="font-weight-bold mr-2" target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
                     {% if item.abstract %}
                     <div
                         class="collapse"
