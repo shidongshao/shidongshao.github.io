@@ -1,6 +1,6 @@
 ---
 title:          "Information Aggregation and Market Feedback: Evidence from the introduction of NASDAQ's closing auction"
-date:           2026-06-03 00:01:00 +0800
+date:           2026-11-01 00:01:00 +0800
 category: working-paper
 pub:            The Accounting Review
 pub_pre:        "Revise & Resubmit at "
